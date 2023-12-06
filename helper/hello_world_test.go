@@ -41,3 +41,13 @@ func TestSkip(t *testing.T)  {
 	result := HelloWorld("Eko")
 	assert.Equal(t, "Hello Eko", result)
 }
+
+
+// Before dan After Test
+func TestMain(m *testing.M)  {
+	fmt.Println("Sebelum unit test")
+
+	m.Run()		// Eksekusi Semua Unit Test
+
+	fmt.Println("Sesudah unit test")
+}
