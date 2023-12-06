@@ -51,3 +51,20 @@ func TestMain(m *testing.M)  {
 
 	fmt.Println("Sesudah unit test")
 }
+
+
+// Sub Test
+// Go-Lang mendukung fitur pembuatan
+// function unit test di dalam function unit test
+
+func TestSubTest(t *testing.T)  {
+	t.Run("Eko", func(t *testing.T) {
+		result := HelloWorld("Eko")
+		assert.Equal(t, "Hello Eko", result)
+	})
+
+	t.Run("Rizal", func(t *testing.T) {
+		result := HelloWorld("Rizal")
+		assert.Equal(t, "Hello Rizal", result)
+	})
+}
