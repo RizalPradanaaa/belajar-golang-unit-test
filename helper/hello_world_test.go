@@ -76,3 +76,18 @@ func BenchmarkHelloWorld(b *testing.B) {
 		HelloWorld("Eko")
 	}
 }
+
+
+func BenchmarkHelloWorldSub(b *testing.B) {
+	b.Run("Eko", func(b *testing.B) {
+		for i := 0; i < b.N; i++ {
+			HelloWorld("Eko")
+		}
+	})
+
+	b.Run("Rizal", func(b *testing.B) {
+		for i := 0; i < b.N; i++ {
+			HelloWorld("Rizal")
+		}
+	})
+}
