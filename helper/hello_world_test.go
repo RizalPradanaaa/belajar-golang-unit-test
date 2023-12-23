@@ -68,3 +68,11 @@ func TestSubTest(t *testing.T)  {
 		assert.Equal(t, "Hello Rizal", result)
 	})
 }
+
+
+// Benchmark adalah mekanisme menghitung kecepatan performa kode aplikasi kita
+func BenchmarkHelloWorld(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("Eko")
+	}
+}
